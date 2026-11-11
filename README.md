@@ -1,5 +1,6 @@
 # Pinturería y Ferretería Limache — Catálogo Digital & Web Mobile-First
 
+[![Live Demo](https://img.shields.io/badge/Vercel-Producci%C3%B3n%20Activa-success?style=flat&logo=vercel)](https://ferreteria-limache.vercel.app)
 [![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-blue?style=flat&logo=react)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat&logo=typescript)](https://www.typescriptlang.org/)
@@ -7,6 +8,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 Plataforma web comercial y catálogo interactivo mobile-first para **Pinturería y Ferretería Limache**, negocio local de Barrio Limache (Salta Capital). Diseñado para consulta rápida de stock, cotizaciones directas por WhatsApp y pedidos para retiro sin fila.
+
+🌐 **Sitio Web Oficial en Producción:** [https://ferreteria-limache.vercel.app](https://ferreteria-limache.vercel.app)
 
 ---
 
