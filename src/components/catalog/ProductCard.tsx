@@ -31,8 +31,8 @@ export function ProductCard({ product }: ProductCardProps) {
           </span>
         </div>
 
-        {/* Product Name */}
-        <h3 className="font-bold text-sm sm:text-base text-zinc-900 dark:text-zinc-100 leading-snug">
+        {/* Product Name con break-words anti desborde */}
+        <h3 className="font-bold text-sm sm:text-base text-zinc-900 dark:text-zinc-100 leading-snug break-words">
           {product.name}
         </h3>
 
@@ -49,14 +49,15 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
       </div>
 
-      {/* Action Buttons (Mobile-first) */}
+      {/* Action Buttons (Mobile-first con Touch Area >= 44px) */}
       <div className="mt-4 pt-3 border-t border-zinc-100 dark:border-zinc-800 grid grid-cols-2 gap-2">
         <a
           href={directWhatsAppUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold bg-emerald-50 text-emerald-700 hover:bg-emerald-100 dark:bg-emerald-950/40 dark:text-emerald-300 dark:hover:bg-emerald-900/60 border border-emerald-200 dark:border-emerald-800 transition-colors"
-          title="Consultar por este material"
+          className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-xs font-bold bg-emerald-50 text-emerald-700 hover:bg-emerald-100 dark:bg-emerald-950/40 dark:text-emerald-300 dark:hover:bg-emerald-900/60 border border-emerald-200 dark:border-emerald-800 transition-colors cursor-pointer"
+          title={`Consultar por ${product.name} en WhatsApp`}
+          aria-label={`Consultar stock de ${product.name} por WhatsApp`}
         >
           <MessageCircle className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
           <span>Consultar</span>
@@ -65,7 +66,8 @@ export function ProductCard({ product }: ProductCardProps) {
         <button
           onClick={() => addItem(product, 1)}
           type="button"
-          className={`flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition-all ${
+          aria-label={isInCart ? `Modificar ${product.name} en el pedido` : `Agregar ${product.name} al pedido`}
+          className={`flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
             isInCart
               ? "bg-blue-50 text-blue-700 border border-blue-200 dark:bg-blue-950/50 dark:text-blue-300 dark:border-blue-800"
               : "bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-950 dark:hover:bg-white"

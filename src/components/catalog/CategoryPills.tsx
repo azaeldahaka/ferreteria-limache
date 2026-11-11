@@ -43,7 +43,7 @@ export function CategoryPills({
   };
 
   return (
-    <div className="w-full overflow-x-auto no-scrollbar py-2">
+    <div className="w-full overflow-x-auto no-scrollbar py-2 touch-pan-y overscroll-x-contain">
       <div className="flex items-center gap-2 min-w-max pb-1">
         <button
           onClick={() => onSelectCategory("all")}

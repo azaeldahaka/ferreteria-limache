@@ -19,7 +19,7 @@ export function WhatsAppFloatButton() {
   const generalUrl = whatsAppMessageBuilder.buildGeneralInquiry();
 
   return (
-    <div className="fixed bottom-5 right-5 z-40 flex items-center gap-2">
+    <div className="fixed bottom-[calc(1.25rem+env(safe-area-inset-bottom,0px))] right-[calc(1.25rem+env(safe-area-inset-right,0px))] z-40 flex items-center gap-2">
       <a
         href={generalUrl}
         onClick={handleClick}

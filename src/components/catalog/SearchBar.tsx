@@ -19,7 +19,11 @@ export function SearchBar({ value, onChange, totalResults }: SearchBarProps) {
           value={value}
           onChange={(e) => onChange(e.target.value)}
           placeholder="Buscar pinturas, caños, amoladora, cables, tarugos..."
-          className="w-full pl-10 pr-10 py-3 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-sm placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all shadow-sm"
+          aria-label="Buscar materiales en el catálogo"
+          autoCapitalize="none"
+          autoCorrect="off"
+          enterKeyHint="search"
+          className="w-full pl-10 pr-10 py-3 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-base sm:text-sm placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all shadow-sm"
         />
         {value.length > 0 && (
           <button
